@@ -1,4 +1,4 @@
-# SteemStats (This is the sample with only one feature)
+# SteemStats (This is a smaple)
 A Multifunctional Steem Discord Bot delevloped by @dhaka.witness
 
 
