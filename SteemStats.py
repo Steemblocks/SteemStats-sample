@@ -6,9 +6,17 @@ import re
 import json
 import logging
 import matplotlib.pyplot as plt
+from io import BytesIO
+from discord import app_commands
+import random
+import socket
+from time import time
 import io
 from datetime import datetime, timedelta
-from discord.ext import commands
+from discord.ext import commands, tasks
+from datetime import datetime, timezone
+import json
+import os
 
 
 # Set up logging to suppress PyNaCl warning
@@ -43,7 +51,10 @@ tree = discord.app_commands.CommandTree(client)
 intents = discord.Intents.default()
 intents.messages = True
 intents.message_content = True
+intents.guilds = True
 
+
+# Client setup
 client = discord.Client(intents=intents)
 tree = discord.app_commands.CommandTree(client)
 
